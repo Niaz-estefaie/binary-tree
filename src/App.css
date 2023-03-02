@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus {
+  border-color: #0077ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 32px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0062cc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  background-color: #005cbf;
+}
+
+.binary-tree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.flex-tree-container {
+  margin: 40px 0;
+}
+
+.flex-tree-container ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin: auto;
+}
+
+.flex-tree-container > ul > li {
+  box-sizing: border-box;
+  flex: 1;
+  padding: 0 5px;
+}
+
+.flex-tree-container > ul > li > *:not(ul):not(li) {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.flex-tree-container > ul > li > ul {
+  margin-top: 59px;
+  position: relative;
+}
+
+.flex-tree-container > ul > li > ul > li {
+  position: relative;
+}
+
+.node-label {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
